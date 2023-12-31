@@ -1,0 +1,360 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: '2'
+    meta.helm.sh/release-name: odoo
+    meta.helm.sh/release-namespace: local
+  creationTimestamp: '2023-12-30T22:47:29Z'
+  generation: 4
+  labels:
+    app.kubernetes.io/instance: odoo
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: odoo
+    app.kubernetes.io/version: 17.0.20231205
+    helm.sh/chart: odoo-25.0.4
+  managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:meta.helm.sh/release-name: {}
+            f:meta.helm.sh/release-namespace: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/managed-by: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/version: {}
+            f:helm.sh/chart: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:revisionHistoryLimit: {}
+          f:selector: {}
+          f:strategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:app.kubernetes.io/instance: {}
+                f:app.kubernetes.io/managed-by: {}
+                f:app.kubernetes.io/name: {}
+                f:app.kubernetes.io/version: {}
+                f:helm.sh/chart: {}
+            f:spec:
+              f:affinity:
+                .: {}
+                f:podAntiAffinity:
+                  .: {}
+                  f:preferredDuringSchedulingIgnoredDuringExecution: {}
+              f:containers:
+                k:{"name":"odoo"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"ALLOW_EMPTY_PASSWORD"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"BITNAMI_DEBUG"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ODOO_DATABASE_FILTER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ODOO_DATABASE_HOST"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ODOO_DATABASE_NAME"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ODOO_DATABASE_PASSWORD"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:secretKeyRef: {}
+                    k:{"name":"ODOO_DATABASE_PORT_NUMBER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ODOO_DATABASE_USER"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ODOO_EMAIL"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ODOO_LOAD_DEMO_DATA"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"ODOO_PASSWORD"}:
+                      .: {}
+                      f:name: {}
+                      f:valueFrom:
+                        .: {}
+                        f:secretKeyRef: {}
+                    k:{"name":"ODOO_SKIP_BOOTSTRAP"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:livenessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:initialDelaySeconds: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8069,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:readinessProbe:
+                    .: {}
+                    f:failureThreshold: {}
+                    f:httpGet:
+                      .: {}
+                      f:path: {}
+                      f:port: {}
+                      f:scheme: {}
+                    f:initialDelaySeconds: {}
+                    f:periodSeconds: {}
+                    f:successThreshold: {}
+                    f:timeoutSeconds: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/bitnami/odoo"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"odoo-data"}:
+                  .: {}
+                  f:name: {}
+                  f:persistentVolumeClaim:
+                    .: {}
+                    f:claimName: {}
+      manager: helm
+      operation: Update
+      time: '2023-12-30T22:47:29Z'
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          f:replicas: {}
+          f:template:
+            f:metadata:
+              f:namespace: {}
+      manager: agent
+      operation: Update
+      time: '2023-12-30T22:57:11Z'
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:deployment.kubernetes.io/revision: {}
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: k3s
+      operation: Update
+      subresource: status
+      time: '2023-12-30T23:11:44Z'
+  name: odoo
+  namespace: local
+  resourceVersion: '326216'
+  uid: c9c40fdd-8703-4a13-b1d8-b7aaba847766
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: odoo
+      app.kubernetes.io/name: odoo
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: odoo
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/name: odoo
+        app.kubernetes.io/version: 17.0.20231205
+        helm.sh/chart: odoo-25.0.4
+      namespace: local
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app.kubernetes.io/instance: odoo
+                    app.kubernetes.io/name: odoo
+                topologyKey: kubernetes.io/hostname
+              weight: 1
+      containers:
+        - env:
+            - name: BITNAMI_DEBUG
+              value: 'false'
+            - name: ALLOW_EMPTY_PASSWORD
+              value: 'no'
+            - name: ODOO_DATABASE_HOST
+              value: odoo-postgresql
+            - name: ODOO_DATABASE_PORT_NUMBER
+              value: '5432'
+            - name: ODOO_DATABASE_NAME
+              value: bitnami_odoo
+            - name: ODOO_DATABASE_FILTER
+              value: .*
+            - name: ODOO_DATABASE_USER
+              value: bn_odoo
+            - name: ODOO_DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: password
+                  name: odoo-postgresql
+            - name: ODOO_EMAIL
+              value: user@example.com
+            - name: ODOO_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: odoo-password
+                  name: odoo
+            - name: ODOO_SKIP_BOOTSTRAP
+              value: 'no'
+            - name: ODOO_LOAD_DEMO_DATA
+              value: 'no'
+          image: docker.io/bitnami/odoo:17.0.20231205-debian-11-r1
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /web/health
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 600
+            periodSeconds: 30
+            successThreshold: 1
+            timeoutSeconds: 5
+          name: odoo
+          ports:
+            - containerPort: 8069
+              name: http
+              protocol: TCP
+          readinessProbe:
+            failureThreshold: 6
+            httpGet:
+              path: /web/health
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 5
+          resources:
+            requests:
+              cpu: 300m
+              memory: 512Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+            - mountPath: /bitnami/odoo
+              name: odoo-data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: odoo
+      serviceAccountName: odoo
+      terminationGracePeriodSeconds: 30
+      volumes:
+        - name: odoo-data
+          persistentVolumeClaim:
+            claimName: odoo
+status:
+  availableReplicas: 1
+  conditions:
+    - lastTransitionTime: '2023-12-30T22:47:29Z'
+      lastUpdateTime: '2023-12-30T22:56:25Z'
+      message: ReplicaSet "odoo-db65d98f5" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: 'True'
+      type: Progressing
+    - lastTransitionTime: '2023-12-30T23:11:44Z'
+      lastUpdateTime: '2023-12-30T23:11:44Z'
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: 'True'
+      type: Available
+  observedGeneration: 4
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1
