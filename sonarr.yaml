@@ -1,0 +1,242 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+    field.cattle.io/publicEndpoints: 'null'
+    objectset.rio.cattle.io/applied: >-
+      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
+    objectset.rio.cattle.io/id: c6365278-056a-4f21-aeca-590113469b6a
+  creationTimestamp: '2023-12-31T20:27:06Z'
+  generation: 2
+  labels:
+    objectset.rio.cattle.io/hash: 3a95a47c9c1bc4b3cfe3c9b7c9c5027c899a8113
+    workload.user.cattle.io/workloadselector: apps.deployment-local-sonar
+  managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:field.cattle.io/publicEndpoints: {}
+            f:objectset.rio.cattle.io/applied: {}
+            f:objectset.rio.cattle.io/id: {}
+          f:labels:
+            .: {}
+            f:objectset.rio.cattle.io/hash: {}
+            f:workload.user.cattle.io/workloadselector: {}
+        f:spec:
+          f:progressDeadlineSeconds: {}
+          f:replicas: {}
+          f:revisionHistoryLimit: {}
+          f:selector: {}
+          f:strategy:
+            f:rollingUpdate:
+              .: {}
+              f:maxSurge: {}
+              f:maxUnavailable: {}
+            f:type: {}
+          f:template:
+            f:metadata:
+              f:labels:
+                .: {}
+                f:workload.user.cattle.io/workloadselector: {}
+              f:name: {}
+              f:namespace: {}
+            f:spec:
+              f:affinity: {}
+              f:containers:
+                k:{"name":"sonarr"}:
+                  .: {}
+                  f:env:
+                    .: {}
+                    k:{"name":"PGID"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"PUID"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"TZ"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                    k:{"name":"UMASK"}:
+                      .: {}
+                      f:name: {}
+                      f:value: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:ports:
+                    .: {}
+                    k:{"containerPort":8989,"protocol":"TCP"}:
+                      .: {}
+                      f:containerPort: {}
+                      f:name: {}
+                      f:protocol: {}
+                  f:resources: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:privileged: {}
+                    f:readOnlyRootFilesystem: {}
+                    f:runAsNonRoot: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/config"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                    k:{"mountPath":"/data"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+              f:dnsPolicy: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"config"}:
+                  .: {}
+                  f:name: {}
+                  f:persistentVolumeClaim:
+                    .: {}
+                    f:claimName: {}
+                k:{"name":"data"}:
+                  .: {}
+                  f:name: {}
+                  f:persistentVolumeClaim:
+                    .: {}
+                    f:claimName: {}
+      manager: agent
+      operation: Update
+      time: '2023-12-31T20:27:06Z'
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:conditions:
+            .: {}
+            k:{"type":"Available"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Progressing"}:
+              .: {}
+              f:lastTransitionTime: {}
+              f:lastUpdateTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+          f:updatedReplicas: {}
+      manager: k3s
+      operation: Update
+      subresource: status
+      time: '2023-12-31T20:27:09Z'
+  name: sonarr
+  namespace: local
+  resourceVersion: '498711'
+  uid: 9aeb8ee1-3923-4896-be5b-570f258f82a1
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      workload.user.cattle.io/workloadselector: apps.deployment-local-sonarr
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        workload.user.cattle.io/workloadselector: apps.deployment-local-sonarr
+      name: sonarr
+      namespace: local
+    spec:
+      affinity: {}
+      containers:
+        - env:
+            - name: PUID
+              value: '1000'
+            - name: PGID
+              value: '1000'
+            - name: UMASK
+              value: '002'
+            - name: TZ
+              value: Etc/UTC
+          image: ghcr.io/hotio/sonarr
+          imagePullPolicy: Always
+          name: sonarr
+          ports:
+            - containerPort: 8989
+              name: http
+              protocol: TCP
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: false
+            runAsNonRoot: false
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+            - mountPath: /config
+              name: config
+            - mountPath: /data
+              name: data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: default
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 30
+      volumes:
+        - name: config
+          persistentVolumeClaim:
+            claimName: sonarr-config
+        - name: data
+          persistentVolumeClaim:
+            claimName: sonarr-data
+status:
+  availableReplicas: 1
+  conditions:
+    - lastTransitionTime: '2023-12-31T20:27:09Z'
+      lastUpdateTime: '2023-12-31T20:27:09Z'
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: 'True'
+      type: Available
+    - lastTransitionTime: '2023-12-31T20:27:06Z'
+      lastUpdateTime: '2023-12-31T20:27:09Z'
+      message: ReplicaSet "sonarr-67565f48fd" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: 'True'
+      type: Progressing
+  observedGeneration: 2
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1
